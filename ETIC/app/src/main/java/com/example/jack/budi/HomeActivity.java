@@ -28,22 +28,27 @@ public class HomeActivity extends AppCompatActivity
 
 
         final ArrayList<Challenge> challenges = new ArrayList<Challenge>();
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 2,1));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,2));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,3));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,4));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,5));
+
 
         ChallengeAdapter  challengeAdapter= new ChallengeAdapter(this, challenges);
 
@@ -63,9 +68,7 @@ public class HomeActivity extends AppCompatActivity
                     case 0:
                         Challenge obj = challenges.get(0);
                         Intent intent = new Intent(HomeActivity.this, ChallengeViewActivity.class);
-
                         intent.putExtra("userTag",obj);
-
                         startActivity(intent);
                         break;
 

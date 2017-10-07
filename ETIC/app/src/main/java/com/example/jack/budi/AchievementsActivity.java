@@ -19,22 +19,28 @@ public class AchievementsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         final ArrayList<Challenge> challenges = new ArrayList<Challenge>();
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
-        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,1));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,2));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,3));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,4));
+        challenges.add(new Challenge("Edinburgh Castle",
+                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                "Longer Description",
+                500, 0,5));
+
+
 
         ChallengeAdapter  challengeAdapter= new ChallengeAdapter(AchievementsActivity.this, challenges);
 

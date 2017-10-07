@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 public class ChallengeAdapter extends ArrayAdapter {
 
-    public ChallengeAdapter(Activity context, ArrayList<Challenge> challenge){
-        super(context, 0 , challenge );
+    public ChallengeAdapter(Activity context, ArrayList<Challenge> challenge) {
+        super(context, 0, challenge);
     }
 
 
@@ -27,42 +27,60 @@ public class ChallengeAdapter extends ArrayAdapter {
 
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.achievement_list_view, parent, false);
         }
 
         Challenge challengePos = (Challenge) getItem(position);
 
-        //find the text view of the custom view
-        TextView title = (TextView) listItemView.findViewById(R.id.title_challenge);
 
-        //Set the text in the TextView
-        title.setText(challengePos.getTitle());
+            //find the text view of the custom view
+            TextView title = (TextView) listItemView.findViewById(R.id.title_challenge);
 
-        //find the text view of the custom view
-        TextView description = (TextView) listItemView.findViewById(R.id.description_challenge);
+            //Set the text in the TextView
+            title.setText(challengePos.getTitle());
 
-        //Set the text in the TextView
-        description.setText(challengePos.getDescription());
+            //find the text view of the custom view
+            TextView description = (TextView) listItemView.findViewById(R.id.description_challenge);
 
-        //Find the Image view of the custom view
-        ImageView imgChallenge = (ImageView) listItemView.findViewById(R.id.image_challenge);
+            //Set the text in the TextView
+            description.setText(challengePos.getDescription());
 
-        switch (challengePos.getPoints()){
-            case 100:
-                imgChallenge.setImageResource(R.drawable.ic_menu_camera);
-                break;
-            case  500:
-                imgChallenge.setImageResource(R.drawable.ic_menu_camera);
-                break;
-            case 1000:
-                imgChallenge.setImageResource(R.drawable.ic_menu_camera);
-                break;
+            //Find the Image view of the custom view
+            ImageView imgChallenge = (ImageView) listItemView.findViewById(R.id.image_challenge);
+
+
+            switch (challengePos.getPoints()) {
+                case 10:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+                case 15:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+                case 25:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+                case 50:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+                case 100:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+                case 150:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+                case 200:
+                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    break;
+            }
+
+
+
+            //return the listItemView (containing 2 TextViews)
+            return listItemView;
+
         }
+    }
 
-        //return the listItemView (containing 2 TextViews)
-        return listItemView;
 
-        }
-}

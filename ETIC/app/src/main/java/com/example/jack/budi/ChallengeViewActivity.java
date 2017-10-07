@@ -21,7 +21,7 @@ public class ChallengeViewActivity extends AppCompatActivity {
         title.setText(uobj.getTitle());
 
         TextView des = (TextView) findViewById(R.id.challenge_view_description);
-        des.setText(uobj.getDescription());
+        des.setText(uobj.getDescriptionLong());
 
         Button btn = (Button) findViewById(R.id.challenge_view_button);
         switch (uobj.getCompleted()){

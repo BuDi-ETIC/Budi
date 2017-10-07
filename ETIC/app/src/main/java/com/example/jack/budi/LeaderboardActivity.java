@@ -18,28 +18,19 @@ public class LeaderboardActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final ArrayList<Challenge> challenges = new ArrayList<Challenge>();
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
-        challenges.add(new Challenge("Name", "Leaderboard,",
-                500, 0));
+        final ArrayList<Player> players = new ArrayList<Player>();
+        players.add(new Player(2, "Erin", "password", 1001, "Scottish"));
+        players.add(new Player(1, "JackHorse1000", "password", 400, "Northern Irish"));
+        players.add(new Player(4, "Sean", "password", 88, "English"));
+        players.add(new Player(3, "Zsolt", "password", 1, "Jamican"));
 
 
 
 
-        ChallengeAdapter  challengeAdapter= new ChallengeAdapter(LeaderboardActivity.this, challenges);
+
+
+
+        LeaderboardAdapter leaderboardAdapter = new LeaderboardAdapter(LeaderboardActivity.this, players);
 
         ListView listView = (ListView) findViewById(R.id.leaderboard_list);
 
@@ -47,7 +38,7 @@ public class LeaderboardActivity extends AppCompatActivity {
         // {@link ListView} will display list items for each word in the list of words.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
-        listView.setAdapter(challengeAdapter);
+        listView.setAdapter(leaderboardAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
