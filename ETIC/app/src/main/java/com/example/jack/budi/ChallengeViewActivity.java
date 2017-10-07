@@ -32,6 +32,7 @@ public class ChallengeViewActivity extends AppCompatActivity {
                 btn.setText("CHALLENGE PENDING");
                 break;
             case 2:
+                btn.setBackgroundColor(getResources().getColor(R.color.green));
                 btn.setText("CHALLENGE COMPLETED");
                 break;
 

@@ -28,26 +28,48 @@ public class HomeActivity extends AppCompatActivity
 
 
         final ArrayList<Challenge> challenges = new ArrayList<Challenge>();
-        challenges.add(new Challenge("Edinburgh Castle",
-                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                "Longer Description",
-                500, 2,1));
-        challenges.add(new Challenge("Edinburgh Castle",
-                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                "Longer Description",
-                500, 0,2));
-        challenges.add(new Challenge("Edinburgh Castle",
-                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                "Longer Description",
-                500, 0,3));
-        challenges.add(new Challenge("Edinburgh Castle",
-                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                "Longer Description",
-                500, 0,4));
-        challenges.add(new Challenge("Edinburgh Castle",
-                "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
-                "Longer Description",
-                500, 0,5));
+
+        challenges.add(new Challenge("Scott Monument",
+                "200-foot spire dedicated to Sir Walter Scott, the famous Scottish poet.",
+                "200-foot spire dedicated to Sir Walter Scott, the famous Scottish poet. Climb 287 to the tippy top and enjoy breathtaking views of the city, all for a fiver. Afraid of heights? Just climb to the first tier, and explore the Sir Walter Scott museum room.",
+                10, 1,2));
+
+        challenges.add(new Challenge("Elephant House",
+                "Coined the ìbirthplace of Harry Potter,î this cafe is a must-see for any Potterhead wanting to glimpse a table where JK Rowling penned her books.",
+                "Coined the ìbirthplace of Harry Potter,î this cafe is a must-see for any Potterhead wanting to glimpse a table where JK Rowling penned her books. Arrive early to skip the crowd and make sure to visit the bathroom for a veritable shrine to the series.",
+                15, 0,3));
+
+        challenges.add(new Challenge("Camera Obscura",
+                "Enjoy unique 360 degree panoramic views over Edinburgh from the fascinating Camera Obscura and rooftop terrace.",
+                "Enjoy unique 360 degree panoramic views over Edinburgh from the fascinating Camera Obscura and rooftop terrace. In World of Illusions, experience five floors of interactive hands-on optical illusions, tricks and fun things to do including vortex tunnel, mirror maze and shrinking room. Get involved, play, touch everything. Great fun for all ages and nationalities, whatever the weather.",
+                100, 0,4));
+
+        challenges.add(new Challenge("National Museum of Scotland",
+                "Explore the diversity of the natural world, world cultures, science and technology, art, design and fashion, and Scottish history, all under one roof.",
+                "2017 is the year of Scottish History, Heritage, and Archaeology. What better place to celebrate this by visiting the museum recently voted Scotlandís #1 visitor attraction. Explore the diversity of the natural world, world cultures, science and technology, art, design and fashion, and Scottish history, all under one roof. Free entry!",
+                25, 0,6));
+
+        challenges.add(new Challenge("Scottish National Gallery",
+                "Collections of fine art situated in the heart of Edinburgh. Free entry!",
+                "Situated in the heart of Edinburgh, the Scottish National Gallery is home to one of the best collections of fine art in the world. Free entry!",
+                10, 0,7));
+
+        challenges.add(new Challenge("Greyfriarís Kirkyard",
+                "Graveyard predating the establishment of the Kirk in 1620. Beloved by Potter fans, many seek out the headstones that inspired names for characters in the series.",
+                "24-hour access to the public, this graveyard predates the establishment of the Kirk in 1620. Although popularly associated with Greyfriars Bobby, this site was the setting for many historical events of national significance, including the imprisoning of Covenanters after the Battle of Bothwell Bridge in 1679. Beloved by Potter fans, many seek out the headstones that inspired names for characters in the series.",
+                15, 0,9));
+
+        challenges.add(new Challenge("Princes Street Gardens",
+                "The former site of the \"Norí Loch\"(or North Lake), this public park has beautiful green gardens and pathways for you to venture between Edinburghís Old and New Towns.",
+                "The former site of the \"Norí Loch\" (or North Lake), this public park has beautiful green gardens and pathways for you to venture between Edinburghís Old and New Towns.",
+                15, 1,10));
+
+        challenges.add(new Challenge("Calton Hill",
+                "The panoramic views from Calton Hill have astonished and inspired visitors for centuries.",
+                "The panoramic views from Calton Hill have astonished and inspired visitors for centuries. Major landmarks can be seen from a birdís eye view: Arthurís Seat with the Crags behind Holyrood Palace and the Parliament, Leith and the Firth of Forth, Princes Street in its New Town grid and the Royal Mile climbing up towards the Castle.",
+                15, 1,11));
+
+
 
 
         ChallengeAdapter  challengeAdapter= new ChallengeAdapter(this, challenges);
@@ -63,14 +85,71 @@ public class HomeActivity extends AppCompatActivity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(HomeActivity.this, ChallengeViewActivity.class);
+                Challenge obj;
                //do something on the click of a challenge item
                 switch (i) {
                     case 0:
-                        Challenge obj = challenges.get(0);
-                        Intent intent = new Intent(HomeActivity.this, ChallengeViewActivity.class);
+                         obj = challenges.get(0);
                         intent.putExtra("userTag",obj);
                         startActivity(intent);
                         break;
+                    case 1:
+                        obj = challenges.get(1);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        obj = challenges.get(2);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        obj = challenges.get(3);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        obj = challenges.get(4);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        obj = challenges.get(5);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        obj = challenges.get(6);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        obj = challenges.get(7);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 8:
+                        obj = challenges.get(8);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        obj = challenges.get(9);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 10:
+                        obj = challenges.get(10);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+                    case 11:
+                        obj = challenges.get(11);
+                        intent.putExtra("userTag",obj);
+                        startActivity(intent);
+                        break;
+
 
 
 
@@ -148,8 +227,6 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intentLogin);
 
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 

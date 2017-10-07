@@ -53,25 +53,25 @@ public class ChallengeAdapter extends ArrayAdapter {
 
             switch (challengePos.getPoints()) {
                 case 10:
-                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    imgChallenge.setImageResource(R.drawable.ic_10);
                     break;
                 case 15:
                     imgChallenge.setImageResource(R.drawable.ic_menu_camera);
                     break;
                 case 25:
-                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    imgChallenge.setImageResource(R.drawable.ic_25);
                     break;
                 case 50:
                     imgChallenge.setImageResource(R.drawable.ic_menu_camera);
                     break;
                 case 100:
-                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    imgChallenge.setImageResource(R.drawable.ic_100);
                     break;
                 case 150:
                     imgChallenge.setImageResource(R.drawable.ic_menu_camera);
                     break;
                 case 200:
-                    imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    imgChallenge.setImageResource(R.drawable.ic_200);
                     break;
             }
 

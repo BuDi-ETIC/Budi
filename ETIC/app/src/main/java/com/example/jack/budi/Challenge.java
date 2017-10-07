@@ -15,6 +15,7 @@ public class Challenge implements Parcelable {
     private int completed;
     private int cID;
 
+
     public Challenge(String title, String description, String descriptionLong, int points, int completed,int cID){
         this.title=title;
         this.description=description;
