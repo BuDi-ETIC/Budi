@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -210,8 +211,7 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent intentHome = new Intent(HomeActivity.this, HomeActivity.class);
-            startActivity(intentHome);
+            Toast.makeText(this, "You are on the Home Page", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_achievements) {
             Intent intentAchievements = new Intent(HomeActivity.this, AchievementsActivity.class);

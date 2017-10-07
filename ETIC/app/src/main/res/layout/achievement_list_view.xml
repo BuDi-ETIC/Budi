@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="220dp"
+
+    >
 
     <ImageView
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/edinburgh_placeholder"
+        android:id="@+id/pic_challenge"/>
+
+    <ImageView
+        android:layout_below="@+id/pic_challenge"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:id="@+id/image_challenge"
         android:src="@mipmap/ic_launcher"/>
 
     <LinearLayout
+        android:paddingLeft="8dp"
+        android:layout_below="@+id/pic_challenge"
         android:layout_toRightOf="@id/image_challenge"
         android:id="@+id/linear_layout"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <TextView
             android:gravity="top"
@@ -26,6 +42,7 @@
             android:text="Edinburgh Castle"
             />
         <TextView
+            android:paddingRight="8dp"
             android:gravity="top"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -38,6 +55,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:attr/selectableItemBackground"/>
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
