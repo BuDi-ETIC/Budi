@@ -2,19 +2,19 @@ package com.example.jack.budi;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,25 +27,57 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        HomeFragment homeFragment = new HomeFragment();
-        FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(
-                R.id.layout_for_fragment,
-                homeFragment,
-                homeFragment.getTag()
-        ).commit();
-        Log.v("LOAD FRAG:", "TRYING TO LOAD");
+        final ArrayList<Challenge> challenges = new ArrayList<Challenge>();
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
+        challenges.add(new Challenge("Edinburgh Castle", "I am a castle, I am a castle, I am a castle, I am a castle, I am a castle, I am a castle,",
+                500, 0));
 
+        ChallengeAdapter  challengeAdapter= new ChallengeAdapter(this, challenges);
 
+        ListView listView = (ListView) findViewById(R.id.challenge_list);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
+        // {@link ListView} will display list items for each word in the list of words.
+        // Do this by calling the setAdapter method on the {@link ListView} object and pass in
+        // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+        listView.setAdapter(challengeAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+               //do something on the click of a challenge item
+                switch (i) {
+                    case 0:
+                        Challenge obj = challenges.get(0);
+                        Intent intent = new Intent(HomeActivity.this, ChallengeViewActivity.class);
+
+                        intent.putExtra("userTag",obj);
+
+                        startActivity(intent);
+                        break;
+
+
+
+                }
             }
         });
+
+
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -96,18 +128,15 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            HomeFragment homeFragment = new HomeFragment();
-            FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(
-                    R.id.layout_for_fragment,
-                     homeFragment,
-                    homeFragment.getTag()
-            ).commit();
-            Log.v("LOAD FRAG:", "TRYING TO LOAD");
+            Intent intentHome = new Intent(HomeActivity.this, HomeActivity.class);
+            startActivity(intentHome);
 
         } else if (id == R.id.nav_achievements) {
-
+            Intent intentAchievements = new Intent(HomeActivity.this, AchievementsActivity.class);
+            startActivity(intentAchievements);
         } else if (id == R.id.nav_leaderboard) {
+            Intent intentLeaderboard = new Intent(HomeActivity.this, LeaderboardActivity.class);
+            startActivity(intentLeaderboard);
 
         } else if (id == R.id.nav_settings) {
 
