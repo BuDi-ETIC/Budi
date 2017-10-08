@@ -58,6 +58,7 @@ public class ChallengeAdapter extends ArrayAdapter {
                     break;
                 case 15:
                     imgChallenge.setImageResource(R.drawable.ic_menu_camera);
+                    
                     break;
                 case 25:
                     imgChallenge.setImageResource(R.drawable.ic_25);
