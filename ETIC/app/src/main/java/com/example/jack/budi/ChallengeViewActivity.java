@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ChallengeViewActivity extends AppCompatActivity {
@@ -16,6 +17,35 @@ public class ChallengeViewActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Challenge uobj= getIntent().getParcelableExtra("userTag");
+
+        ImageView background = (ImageView) findViewById(R.id.background_challenge_view);
+        background.setImageResource(uobj.getImage());
+
+        ImageView points = (ImageView) findViewById(R.id.points_img);
+        switch (uobj.getPoints()) {
+            case 10:
+                points.setImageResource(R.drawable.ic_10);
+                break;
+            case 15:
+                points.setImageResource(R.drawable.ic_menu_camera);
+                break;
+            case 25:
+                points.setImageResource(R.drawable.ic_25);
+                break;
+            case 50:
+                points.setImageResource(R.drawable.ic_menu_camera);
+                break;
+            case 100:
+                points.setImageResource(R.drawable.ic_100);
+                break;
+            case 150:
+                points.setImageResource(R.drawable.ic_menu_camera);
+                break;
+            case 200:
+                points.setImageResource(R.drawable.ic_200);
+                break;
+        }
+
 
         TextView title = (TextView) findViewById(R.id.challenge_view_title);
         title.setText(uobj.getTitle());

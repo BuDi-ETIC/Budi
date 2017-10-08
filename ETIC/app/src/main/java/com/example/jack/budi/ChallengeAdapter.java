@@ -35,6 +35,7 @@ public class ChallengeAdapter extends ArrayAdapter {
         Challenge challengePos = (Challenge) getItem(position);
 
 
+
             //find the text view of the custom view
             TextView title = (TextView) listItemView.findViewById(R.id.title_challenge);
 
@@ -74,6 +75,18 @@ public class ChallengeAdapter extends ArrayAdapter {
                     imgChallenge.setImageResource(R.drawable.ic_200);
                     break;
             }
+
+
+
+        ImageView picChallenge = (ImageView) listItemView.findViewById(R.id.pic_challenge);
+        picChallenge.setImageResource(challengePos.getImage());
+
+
+
+
+
+
+
 
 
 

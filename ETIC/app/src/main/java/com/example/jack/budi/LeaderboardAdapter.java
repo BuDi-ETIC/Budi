@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -68,9 +69,14 @@ public class LeaderboardAdapter extends ArrayAdapter {
         playerScore.setText(player.getGameScore()+"");
 
         TextView pPosition = (TextView) listItemView.findViewById(R.id.leaderboard_rank);
-        pPosition.setText(i+1 + "");
+        pPosition.setText(player.getpID()+"");
 
-        i++;
+
+        if(player.getpID()==7){
+            RelativeLayout background = (RelativeLayout) listItemView.findViewById(R.id.leaderboard_background);
+            background.setBackgroundResource(R.color.colorPrimary);
+
+        }
 
         //return the listItemView (containing 3 TextViews)
         return listItemView;
