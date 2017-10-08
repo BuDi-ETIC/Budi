@@ -8,7 +8,7 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_achievements"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_trophy"
             android:title="Achievements" />
         <item
             android:id="@+id/nav_leaderboard"

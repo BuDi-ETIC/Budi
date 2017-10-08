@@ -29,6 +29,16 @@ public class HomeActivity extends AppCompatActivity
 
 
         final ArrayList<Challenge> challenges = new ArrayList<Challenge>();
+        challenges.add(new Challenge("Loch Lomond",
+                "Find a breathtaking view. An exhilarating ride. Or a moment on the loch shore. Discover everything the National Park has to offer.",
+                "Find a breathtaking view. An exhilarating ride. Or a moment on the loch shore. Discover everything the National Park has to offer. Our National Park boasts some of the most stunning scenery in the world. From breathtaking mountains and glens,to the vast tranquil beauty of our Lochs. What will you see when you visit?",
+                R.drawable.i14,
+                100, 0, 14));
+        challenges.add(new Challenge("Skara Brae",
+                "The Neolithic settlement of Skara Brae is one of the best preserved groups of prehistoric houses in Western Europe.",
+                "The Neolithic settlement of Skara Brae, near the dramatic white beach of the Bay of Skaill, is one of the best preserved groups of prehistoric houses in Western Europe. Uncovered by a storm in 1850, the attraction presents a remarkable picture of life around 5,000 years ago. Visitors can experience a prehistoric village and see ancient homes fitted with stone beds, dressers and seats. A replica construction allows visitors to fully understand the interior of a prehistoric house.",
+                R.drawable.i19,
+                200, 0, 19));
 
 
         challenges.add(new Challenge("Scott Monument",
@@ -95,11 +105,7 @@ public class HomeActivity extends AppCompatActivity
                 R.drawable.i13,
                 50, 0, 13));
 
-        challenges.add(new Challenge("Loch Lomond",
-                "Find a breathtaking view. An exhilarating ride. Or a moment on the loch shore. Discover everything the National Park has to offer.",
-                "Find a breathtaking view. An exhilarating ride. Or a moment on the loch shore. Discover everything the National Park has to offer. Our National Park boasts some of the most stunning scenery in the world. From breathtaking mountains and glens,to the vast tranquil beauty of our Lochs. What will you see when you visit?",
-                R.drawable.i14,
-                100, 0, 14));
+
 
         challenges.add(new Challenge("Gorgie City Farm & Cafe",
                 "A FREE entry urban farm & cafe with a play park for kids.",
@@ -124,16 +130,6 @@ public class HomeActivity extends AppCompatActivity
                 "A magical place of outstanding natural beauty at the foot of the Black Cuillin mountains. The Fairy Pools is becoming increasingly popular so when you visit, please drive carefully on the single track roads, follow the parking enforcement notices and take all your litter away with you. There is a WC at the nearby Glenbrittle Campsite along with some great coffee c/o the Cuillin Coffee Co. Thank you and we hope you enjoy your visit!",
                 R.drawable.i18,
                 100, 0, 18));
-
-        challenges.add(new Challenge("Skara Brae",
-                "The Neolithic settlement of Skara Brae is one of the best preserved groups of prehistoric houses in Western Europe.",
-                "The Neolithic settlement of Skara Brae, near the dramatic white beach of the Bay of Skaill, is one of the best preserved groups of prehistoric houses in Western Europe. Uncovered by a storm in 1850, the attraction presents a remarkable picture of life around 5,000 years ago. Visitors can experience a prehistoric village and see ancient homes fitted with stone beds, dressers and seats. A replica construction allows visitors to fully understand the interior of a prehistoric house.",
-                R.drawable.i19,
-                200, 0, 19));
-
-
-
-
 
 
 
@@ -246,8 +242,6 @@ public class HomeActivity extends AppCompatActivity
 
 
 
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -313,6 +307,9 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intentLogin);
 
         } else if (id == R.id.nav_share) {
+            Intent tweetIntent = new Intent(Intent.ACTION_SEND);
+            tweetIntent.putExtra(Intent.EXTRA_TEXT, "Test tweet");
+            tweetIntent.setType("application/twitter");
 
         }
 

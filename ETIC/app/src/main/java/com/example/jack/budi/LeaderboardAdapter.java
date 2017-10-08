@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.example.jack.budi.R.id.leaderboard_background;
+
 /**
  * Created by jackhorsburgh on 07/10/2017.
  */
@@ -72,11 +74,6 @@ public class LeaderboardAdapter extends ArrayAdapter {
         pPosition.setText(player.getpID()+"");
 
 
-        if(player.getpID()==7){
-            RelativeLayout background = (RelativeLayout) listItemView.findViewById(R.id.leaderboard_background);
-            background.setBackgroundResource(R.color.colorPrimary);
-
-        }
 
         //return the listItemView (containing 3 TextViews)
         return listItemView;

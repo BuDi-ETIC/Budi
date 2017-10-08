@@ -27,19 +27,19 @@ public class ChallengeViewActivity extends AppCompatActivity {
                 points.setImageResource(R.drawable.ic_10);
                 break;
             case 15:
-                points.setImageResource(R.drawable.ic_menu_camera);
+                points.setImageResource(R.drawable.ic_25);
                 break;
             case 25:
                 points.setImageResource(R.drawable.ic_25);
                 break;
             case 50:
-                points.setImageResource(R.drawable.ic_menu_camera);
+                points.setImageResource(R.drawable.ic_100);
                 break;
             case 100:
                 points.setImageResource(R.drawable.ic_100);
                 break;
             case 150:
-                points.setImageResource(R.drawable.ic_menu_camera);
+                points.setImageResource(R.drawable.ic_200);
                 break;
             case 200:
                 points.setImageResource(R.drawable.ic_200);

@@ -5,12 +5,13 @@
     android:id="@+id/leaderboard_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorAccent">
+    android:background="@color/green">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
+        android:textColor="#4e2d80"
         android:id="@+id/leaderboard_rank"
         android:textSize="40sp"/>
 
@@ -24,6 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#4e2d80"
             android:text="Player Name"
             android:id="@+id/leaderboard_username"
             android:textSize="20sp"
@@ -31,6 +33,7 @@
 
         <TextView
             android:layout_width="150sp"
+            android:textColor="#4e2d80"
             android:layout_height="wrap_content"
             android:id="@+id/leaderboard_lvl_name"
             android:text="Player lvl name"/>
@@ -38,6 +41,7 @@
     </LinearLayout>
 
     <TextView
+        android:textColor="#4e2d80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

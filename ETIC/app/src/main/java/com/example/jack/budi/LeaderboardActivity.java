@@ -28,12 +28,12 @@ public class LeaderboardActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         final ArrayList<Player> players = new ArrayList<Player>();
-        players.add(new Player(1, "TheLengend27", "password", 1015, "Scottish"));
-        players.add(new Player(2, "JackHorse1000", "password", 700, "Northern Irish"));
+        players.add(new Player(1, "TheLengend27", "password", 10015, "Scottish"));
+        players.add(new Player(2, "Jack", "password", 700, "Northern Irish"));
         players.add(new Player(3, "Sean", "password", 500, "English"));
         players.add(new Player(4, "Zsolt", "password", 350, "Jamican"));
         players.add(new Player(5, "True Scot", "password", 275, "Jamican"));
-        players.add(new Player(6, "PHD Travis", "password", 200, "Jamican"));
+        players.add(new Player(6, "Erin ", "password", 200, "Jamican"));
         players.add(new Player(7, "Crunchy321", "password", 100, "Jamican"));
         players.add(new Player(8, "Product Forge", "password", 15, "Jamican"));
         players.add(new Player(9, "Traveller123", "password", 0, "Jamican"));
