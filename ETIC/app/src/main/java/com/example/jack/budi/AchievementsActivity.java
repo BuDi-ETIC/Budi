@@ -33,21 +33,18 @@ public class AchievementsActivity extends AppCompatActivity implements Navigatio
                 "A world famous icon of Scotland and part of the Old and New Towns of Edinburghís World Heritage Site. Part of Edinburghís history since the 12th century, it was recently voted top UK Heritage Attraction in the British Travel Awards and is Scotlandís number one paid-for tourist attraction. This most famous of Scottish castles has a complex building history.",
                 R.drawable.i1,
                 10, 2, 1));
-//        challenges.add(new Challenge("Scotch Whisky Experience",
-//                "Take a barrel ride as you actually become part of the whisky making process. Experience for yourself our regional whiskies and whether you like fruity, sweet or smoky flavours.",
-//                "Take a barrel ride as you actually become part of the whisky making process. Experience for yourself our regional whiskies and whether you like fruity, sweet or smoky flavours. Our experts will help you select your perfect dram.Enter the vault containing the world's largest collection of Scotch Whiskies and enjoy a special tutored nosing and tasting. Explore Scotland's whisky history from the very beginnings through to the global success of today.",
-//                R.drawable.i5,
-//                15, 2, 5));
-//        challenges.add(new Challenge("St. Gileís Cathedral",
-//                "St Gilesí Cathedral is the beautiful and historic City Church of Edinburgh.",
-//                "St Gilesí Cathedral is the beautiful and historic City Church of Edinburgh. With its famed crown spire it stands on the Royal Mile between Edinburgh Castle and the Palace of Holyroodhouse. Also known as the High Kirk of Edinburgh, it is the Mother Church of Presbyterianism and contains the Chapel of the Order of the Thistle (Scotlandís chivalric company of knights headed by the Queen).",
-//                R.drawable.i8,
-//                10, 2, 8));
 
+        challenges.add(new Challenge("St. Gileís Cathedral",
+                "St Gilesí Cathedral is the beautiful and historic City Church of Edinburgh.",
+                "St Gilesí Cathedral is the beautiful and historic City Church of Edinburgh. With its famed crown spire it stands on the Royal Mile between Edinburgh Castle and the Palace of Holyroodhouse. Also known as the High Kirk of Edinburgh, it is the Mother Church of Presbyterianism and contains the Chapel of the Order of the Thistle (Scotlandís chivalric company of knights headed by the Queen).",
+                R.drawable.i8,
+                10, 2, 8));
 
-
-
-
+        challenges.add(new Challenge("Scotch Whisky Experience",
+                "Take a barrel ride as you actually become part of the whisky making process. Experience for yourself our regional whiskies and whether you like fruity, sweet or smoky flavours.",
+                "Take a barrel ride as you actually become part of the whisky making process. Experience for yourself our regional whiskies and whether you like fruity, sweet or smoky flavours. Our experts will help you select your perfect dram.Enter the vault containing the world's largest collection of Scotch Whiskies and enjoy a special tutored nosing and tasting. Explore Scotland's whisky history from the very beginnings through to the global success of today.",
+                R.drawable.i5,
+                15, 2, 5));
         ChallengeAdapter  challengeAdapter= new ChallengeAdapter(AchievementsActivity.this, challenges);
 
         ListView listView = (ListView) findViewById(R.id.achievements_list);
